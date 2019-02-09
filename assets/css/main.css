@@ -1,0 +1,52 @@
+.container-fluid{
+    background-color:rgb(255, 234, 0);
+}
+.button{
+    background-color: darkslategrey !important;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    height:50px;
+    cursor: pointer;
+}
+#background{
+    width:100%;
+    z-index: inherit 1;
+}
+#title{
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    animation-name:movement;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes movement {
+    0%   { top:0px;}
+    50%  { top:20px;}
+    100% { top:0px;}
+}
+#rpsp{
+    position: absolute;
+    z-index: inherit 10;
+    left:25%;
+    top:20%;
+    width:40%;
+}
+.hide{
+    display:none !important;
+}
+#spinner{
+    position: absolute;
+    width:100px;
+    height:100px;
+    left:36%;
+    top:20%;
+}
+#textw{
+    position: absolute;
+    top:65%;
+    left:20%;
+    display:inline;
+    text-align: center;
+    margin:4px;
+}
