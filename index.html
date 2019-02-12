@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Rock Paper scissors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -21,52 +21,84 @@
     </div>
 
     <div class="row">
-            <div class="col-md-2">
-                
+            <div class="col-md-4">
+                <h1 class="title">ROCK</h1>
             </div>
-            <div class="col-md-8">
-                <h1 id="title">ROCK, PAPER, SCISSORS</h1>
+            <div class="col-md-3">
+                <h1 class="title">PAPER</h1>
             </div>
-            <div class="col-md-2">
-                
+            <div class="col-md-5">
+                <h1 class="title">SCISSORS</h1>
             </div>
     
         </div>
     <div class="row">
             <div class="col-md-2">
+              <div id="p1r" class="points hide">
+
+              </div>
                 
             </div>
-            <div class="col-md-8">
+            <div id="mainc" class="col-md-8">
                 <br>
-                <img src="assets\images\rps.png" id="rpsp">
+                <img src="assets\images\rps.jpg" id="rpsp">
+                <div id="ppp" class="hide">
+                    <img id="rock"  data-value="rock" class="pics" src="assets/images/r.jpg">
+                    <img id="paper" data-value="paper" class="pics" src="assets/images/p.jpg">
+                    <img id="siss" data-value="siss" class="pics" src="assets/images/s.jpg">
+                </div>
                 <div id="waiting" class="hide">
                 <div id="spinner" class="spinner-border text-primary" role="status">
                     <span class="sr-only">Loading...</span>
                   </div>
                   <h1 id="textw">Waiting for Player 2 ....</h1>
                 </div>
+                <div class="modal" id="modal1" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Both players have entered the game!</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <p>once you click ready the game will begin</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button id="ready" type="button" class="btn btn-primary">Ready</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 <img src="assets\images\background.png" id="background">
                 
             </div>
-            <div class="col-md-2">
-                
+            <div class="col-md-2" style="height:403px">
+                <div class="points ">
+                <h5>Player 1 points: </h5>
+                <ol id="count1">&nbsp;</ol>
+                </div>
+
+                <div class="points ">
+                    <h5>Player 2 points: </h5>
+                    <ol id="count2">&nbsp;</ol>
+                </div>
+                <div class="points " style="text-align: center">
+                    <h6 id="timer">Press start when ready!</h6>
+                </div>
             </div>
     
     </div>
     <div class="row">
-        <div class="col-md-5">
-                &nbsp;
-        </div>
-        <div class="col-md-2">
+        <div class="col-md-12">
             <button type="button" id="mainb" class=" button btn btn-secondary">Start</button>
-        </div>
-        <div class="col-md-5">
-                &nbsp;                
         </div>
      </div>
 
 
 </div>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

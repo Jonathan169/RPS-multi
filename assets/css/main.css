@@ -1,5 +1,6 @@
 .container-fluid{
     background-color:rgb(255, 234, 0);
+    height:100vh;
 }
 .button{
     background-color: darkslategrey !important;
@@ -7,12 +8,15 @@
     text-align: center;
     height:50px;
     cursor: pointer;
+    position: absolute;
+    left:43%;
 }
 #background{
     width:100%;
     z-index: inherit 1;
+    overflow: hidden;
 }
-#title{
+.title{
     position: relative;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
@@ -28,9 +32,9 @@
 #rpsp{
     position: absolute;
     z-index: inherit 10;
-    left:25%;
-    top:20%;
-    width:40%;
+    left:15%;
+    top:15%;
+    width:60%;
 }
 .hide{
     display:none !important;
@@ -39,14 +43,71 @@
     position: absolute;
     width:100px;
     height:100px;
-    left:36%;
+    left:40%;
     top:20%;
 }
 #textw{
     position: absolute;
     top:65%;
-    left:20%;
+    left:25%;
     display:inline;
     text-align: center;
     margin:4px;
 }
+#ppp{
+    position:absolute;
+    z-index: inherit 10;
+    width:100%;
+    top:10%;
+}
+.pics{
+    width:25%;
+    margin-right:5%;
+}
+.pics:hover{
+    border:4px solid darkslategray;
+}
+.picsc{
+    width:25%;
+    margin-right:5%;
+    border:4px solid darkslategray;
+}
+#picd{
+    position: absolute;
+    top:10%;
+    width:100%;
+}
+.points{
+    font-family: 'Press Start 2P', cursive;
+    margin:5%;
+    padding: 2%;
+    border:2px solid black;
+}
+#timer{
+    overflow:hidden;
+}
+ol {
+    height: 20px;
+    padding: 1em 0;
+}
+    li {
+      display: inline-block;
+      height: 20px;
+      border: 1px solid #000;
+      background-color:black;
+      margin-right: 4px;
+    }
+      li:nth-child(5n) {
+        transform: rotate(300deg);
+        height: 30px;
+        position: relative;
+        left: -15px;
+        top: 5px;
+        margin-right: 1em;
+        margin-top: -10px;
+    }
+#modal1{
+    position:fixed;
+    top:20%;
+}
+
